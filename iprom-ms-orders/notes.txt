@@ -1,0 +1,13 @@
+test data
+=========
+customerIds
+1076256
+
+http://localhost:8080/rest/orders/customers/v1/1076397
+
+Hibernate
+https://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/Hibernate_User_Guide.html
+
+docker build --tag=iprom-ms-orders:latest --rm=true .
+
+docker run -it -p 8080:8080 iprom-ms-orders:latest

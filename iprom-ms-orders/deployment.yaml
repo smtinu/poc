@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iprom-ms-orders
+  labels:
+    run: iprom-ms-orders
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: iprom-ms-orders
+  template:
+    metadata:
+      labels:
+        run: iprom-ms-orders
+    spec:
+      containers:
+      - name: iprom-ms-orders
+        image: iprom-ms-orders:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+
